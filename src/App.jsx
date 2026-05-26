@@ -4,6 +4,7 @@ import axios from 'axios';
 
 // Configure Axios to automatically send credentials/cookies
 axios.defaults.withCredentials = true;
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || '';
 
 // Create Global Contexts
 export const UserContext = createContext(null);
